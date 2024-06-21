@@ -1,0 +1,23 @@
+[
+    {
+        "id": "1",
+        "title": "Hangout with friends",
+        "priority": "High priority",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut efficitur dolor, et suscipit nisl. Nulla auctor est justo, efficitur cursus purus facilisis eu. Nulla nec hendrerit felis. Morbi non blandit elit. Suspendisse vestibulum sed mauris quis commodo. In a dui in felis tincidunt luctus quis ut nisl. Pellentesque eget finibus turpis. Sed a dui varius, egestas leo interdum, pellentesque mi. Donec ac ante vel neque sagittis commodo vel eget ante.",
+        "done": false
+    },
+    {
+        "id": "2",
+        "title": "Study for exams",
+        "priority": "Low priority",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut efficitur dolor, et suscipit nisl. Nulla auctor est justo, efficitur cursus purus facilisis eu. Nulla nec hendrerit felis. Morbi non blandit elit. Suspendisse vestibulum sed mauris quis commodo. In a dui in felis tincidunt luctus quis ut nisl. Pellentesque eget finibus turpis. Sed a dui varius, egestas leo interdum, pellentesque mi. Donec ac ante vel neque sagittis commodo vel eget ante.",
+        "done": true
+    },
+    {
+        "id": "3",
+        "title": "Do the laundry",
+        "priority": "Medium priority",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut efficitur dolor, et suscipit nisl. Nulla auctor est justo, efficitur cursus purus facilisis eu. Nulla nec hendrerit felis. Morbi non blandit elit. Suspendisse vestibulum sed mauris quis commodo. In a dui in felis tincidunt luctus quis ut nisl. Pellentesque eget finibus turpis. Sed a dui varius, egestas leo interdum, pellentesque mi. Donec ac ante vel neque sagittis commodo vel eget ante.",
+        "done": false
+    }
+]

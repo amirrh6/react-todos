@@ -1,11 +1,12 @@
 import Navbar from './components/Navbar';
-import TODOs from './components/TODOs';
+import Items from './components/Items';
+import ViewAllTODOs from './components/ViewAllTODOs';
 
 const App = () => {
     return (
         <>
             <Navbar />
-            <TODOs />
+            <Items />
 
             <section className="m-auto max-w-lg my-10 px-6">
                 <a

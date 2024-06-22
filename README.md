@@ -8,8 +8,10 @@ Just a simple experiment with React 18 based on a [tutorial](https://youtu.be/LD
 
 ## Features
 
--   [x] Components:
--   -   [x] Navbar
+-   [ ] Components:
+-   -   [ ] Navbar
+-   -   -   [x] Basic navbar
+-   -   -   [ ] Highlight active page's link
 -   -   [x] Items (TODOs)
 -   -   -   [x] Item (TODO)
 -   -   [x] ViewAllTODOs
@@ -19,8 +21,13 @@ Just a simple experiment with React 18 based on a [tutorial](https://youtu.be/LD
 -   -   [ ] Single TODO page (details)
 -   -   [ ] Add TODO page
 -   -   [ ] ...
+-   [ ] Use 'react-router-dom'
 -   [x] Fetch TODOs from a JSON file
--   [ ] Fetch TODOs from 'json-server'
+-   -   [ ] Update TODOs
+-   [ ] Fetch TODOs from a mock back-end like 'json-server'
+-   -   [ ] Update TODOs
+-   [ ] Fetch TODOs from a real back-end like Firebase
+-   -   [ ] Update TODOs
 -   [ ] ...
 
 ### Screenshot

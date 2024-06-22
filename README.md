@@ -6,4 +6,17 @@ Just a simple experiment with React 18 based on a [tutorial](https://youtu.be/LD
 2. Run `npm install`
 3. Run `npm run dev`
 
+## Features
+
+-   [x] Components:
+-   -   [x] Navbar
+-   -   [x] Items
+-   -   -   [x] Item
+-   -   [x] ViewAllTODOs
+-   [x] Fetch TODOs from a JSON file
+-   [ ] Fetch TODOs from 'json-server'
+-   [ ] ...
+
+### Screenshot
+
 ![Screenshot](screenshot.png 'Screenshot')

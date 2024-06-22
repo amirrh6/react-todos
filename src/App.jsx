@@ -1,15 +1,18 @@
-import Navbar from './components/Navbar';
-import Items from './components/Items';
-import ViewAllTODOs from './components/ViewAllTODOs';
+import {
+    Route,
+    createBrowserRouter,
+    createRoutesFromElements,
+    RouterProvider
+} from 'react-router-dom';
+
+import HomePage from './pages/HomePage';
+
+const router = createBrowserRouter(
+    createRoutesFromElements(<Route index element={<HomePage />} />)
+);
 
 const App = () => {
-    return (
-        <>
-            <Navbar />
-            <Items />
-            <ViewAllTODOs />
-        </>
-    );
+    return <RouterProvider router={router} />;
 };
 
 export default App;

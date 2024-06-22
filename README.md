@@ -22,7 +22,7 @@ Just a simple experiment with React 18 based on a [tutorial](https://youtu.be/LD
 -   -   [ ] Single TODO page (details)
 -   -   [ ] Add TODO page
 -   -   [ ] ...
--   [ ] Use 'react-router-dom'
+-   [x] Use 'react-router-dom'
 -   [x] Use 'react-icons' for Font Awesome Icons
 -   [x] Fetch TODOs from a JSON file
 -   -   [ ] Update TODOs

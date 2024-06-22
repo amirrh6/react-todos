@@ -14,6 +14,7 @@ Just a simple experiment with React 18 based on a [tutorial](https://youtu.be/LD
 -   -   -   [ ] Highlight active page's link
 -   -   [x] Items (TODOs)
 -   -   -   [x] Item (TODO)
+-   -   -   -   [x] Content collapse (more or less) button
 -   -   [x] ViewAllTODOs
 -   [ ] Pages:
 -   -   [x] Home page

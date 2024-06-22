@@ -53,7 +53,7 @@ const Item = ({ todo }) => {
 
                 <div className="flex flex-col lg:flex-row justify-between mb-4">
                     <a
-                        href="#"
+                        href={`/todos/${todo.id}`}
                         className="h-[36px] bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg text-center text-sm"
                     >
                         Details

@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 
 import { useState } from 'react';
+import { FaCheckCircle, FaClock, FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
 const Item = ({ todo }) => {
     const [showFullDescription, setShowFullDescription] = useState(false);
@@ -29,12 +30,23 @@ const Item = ({ todo }) => {
                     className="text-indigo-500 mb-5 hover:text-indigo-600"
                 >
                     {showFullDescription ? 'less' : 'more'}
+                    {!showFullDescription ? (
+                        <FaChevronDown className="inline ml-1" />
+                    ) : (
+                        <FaChevronUp className="inline ml-1" />
+                    )}
                 </button>
 
                 {todo.done ? (
-                    <h3 className="text-indigo-500 mb-2">Done</h3>
+                    <h3 className="text-indigo-500 mb-2">
+                        Done
+                        <FaCheckCircle className="inline ml-1" />
+                    </h3>
                 ) : (
-                    <h3 className="text-orange-700 mb-2">Pending</h3>
+                    <h3 className="text-orange-700 mb-2">
+                        Pending
+                        <FaClock className="inline ml-1" />
+                    </h3>
                 )}
 
                 <div className="border border-gray-100 mb-5"></div>

@@ -10,9 +10,15 @@ Just a simple experiment with React 18 based on a [tutorial](https://youtu.be/LD
 
 -   [x] Components:
 -   -   [x] Navbar
--   -   [x] Items
--   -   -   [x] Item
+-   -   [x] Items (TODOs)
+-   -   -   [x] Item (TODO)
 -   -   [x] ViewAllTODOs
+-   [ ] Pages:
+-   -   [x] Home page
+-   -   [ ] All TODOs page
+-   -   [ ] Single TODO page (details)
+-   -   [ ] Add TODO page
+-   -   [ ] ...
 -   [x] Fetch TODOs from a JSON file
 -   [ ] Fetch TODOs from 'json-server'
 -   [ ] ...

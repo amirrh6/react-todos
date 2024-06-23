@@ -11,18 +11,19 @@ Just a simple experiment with React 18 based on a [tutorial](https://youtu.be/LD
 -   [ ] Components:
 -   -   [ ] Navbar
 -   -   -   [x] Basic navbar
--   -   -   [ ] Highlight active page's link
+-   -   -   [x] Highlight active page's link
 -   -   [x] Items (TODOs)
 -   -   -   [x] Item (TODO)
 -   -   -   -   [x] Content collapse (more or less) button
 -   -   [x] ViewAllTODOs
 -   [ ] Pages:
 -   -   [x] Home page
--   -   [ ] All TODOs page
+-   -   [x] All TODOs page
 -   -   [ ] Single TODO page (details)
 -   -   [ ] Add TODO page
+-   -   [x] Not found (404) page
 -   -   [ ] ...
--   [x] Use 'react-router-dom'
+-   [x] Use 'react-router-dom' and its related components
 -   [x] Use 'react-icons' for Font Awesome Icons
 -   [x] Fetch TODOs from a JSON file
 -   -   [ ] Update TODOs

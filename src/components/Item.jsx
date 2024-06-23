@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { FaCheckCircle, FaClock, FaChevronDown, FaChevronUp } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Item = ({ todo }) => {
     const [showFullDescription, setShowFullDescription] = useState(false);
@@ -52,12 +53,12 @@ const Item = ({ todo }) => {
                 <div className="border border-gray-100 mb-5"></div>
 
                 <div className="flex flex-col lg:flex-row justify-between mb-4">
-                    <a
-                        href={`/todos/${todo.id}`}
+                    <Link
+                        to={`/todos/${todo.id}`}
                         className="h-[36px] bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg text-center text-sm"
                     >
                         Details
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>

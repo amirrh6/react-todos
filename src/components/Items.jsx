@@ -5,7 +5,7 @@ import Item from './Item';
 const Items = ({ returnRecentOnly = false }) => {
     // console.log(todos);
 
-    const TODOsList = returnRecentOnly ? todos.slice(0, 3) : todos;
+    const TODOsList = returnRecentOnly ? todos.slice(0, 6) : todos;
 
     return (
         <section className="bg-blue-50 px-4 py-10">

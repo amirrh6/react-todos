@@ -1,10 +1,11 @@
+/* eslint-disable react/prop-types */
 import todos from '../todos.json';
 import Item from './Item';
 
-const Items = () => {
+const Items = ({ returnRecentOnly = false }) => {
     // console.log(todos);
 
-    const recentTODOs = todos.slice(0, 3);
+    const TODOsList = returnRecentOnly ? todos.slice(0, 3) : todos;
 
     return (
         <section className="bg-blue-50 px-4 py-10">
@@ -13,7 +14,7 @@ const Items = () => {
                     Most recent TODOs
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {recentTODOs.map((todo) => (
+                    {TODOsList.map((todo) => (
                         <Item key={todo.id} todo={todo} />
                     ))}
                 </div>

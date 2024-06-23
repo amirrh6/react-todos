@@ -4,7 +4,7 @@ import ViewAllTODOs from '../components/ViewAllTODOs';
 const HomePage = () => {
     return (
         <>
-            <Items />
+            <Items returnRecentOnly={true} />
             <ViewAllTODOs />
         </>
     );

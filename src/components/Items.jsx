@@ -12,7 +12,11 @@ const Items = ({ returnRecentOnly = false }) => {
     useEffect(() => {
         const fetchTODOs = async () => {
             try {
-                const res = await fetch('http://localhost:8000/jobs');
+                const apiUrl = !returnRecentOnly
+                    ? 'http://localhost:8000/jobs'
+                    : 'http://localhost:8000/jobs?_limit=6';
+
+                const res = await fetch(apiUrl);
                 const data = await res.json();
                 setTODOs(data);
             } catch (error) {
@@ -25,7 +29,8 @@ const Items = ({ returnRecentOnly = false }) => {
         fetchTODOs();
     }, []);
 
-    const TODOsList = returnRecentOnly ? todos.slice(0, 6) : todos;
+    // const TODOsList = returnRecentOnly ? todos.slice(0, 6) : todos;
+    const TODOsList = todos;
 
     return (
         <section className="bg-blue-50 px-4 py-10">

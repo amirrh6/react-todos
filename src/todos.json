@@ -19,5 +19,33 @@
         "priority": "Medium priority",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut efficitur dolor, et suscipit nisl. Nulla auctor est justo, efficitur cursus purus facilisis eu. Nulla nec hendrerit felis. Morbi non blandit elit. Suspendisse vestibulum sed mauris quis commodo. In a dui in felis tincidunt luctus quis ut nisl. Pellentesque eget finibus turpis. Sed a dui varius, egestas leo interdum, pellentesque mi. Donec ac ante vel neque sagittis commodo vel eget ante.",
         "done": false
+    },
+    {
+        "id": "4",
+        "title": "Do the dishes",
+        "priority": "High priority",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut efficitur dolor, et suscipit nisl. Nulla auctor est justo, efficitur cursus purus facilisis eu. Nulla nec hendrerit felis. Morbi non blandit elit. Suspendisse vestibulum sed mauris quis commodo. In a dui in felis tincidunt luctus quis ut nisl. Pellentesque eget finibus turpis. Sed a dui varius, egestas leo interdum, pellentesque mi. Donec ac ante vel neque sagittis commodo vel eget ante.",
+        "done": false
+    },
+    {
+        "id": "5",
+        "title": "Practice piano",
+        "priority": "Low priority",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut efficitur dolor, et suscipit nisl. Nulla auctor est justo, efficitur cursus purus facilisis eu. Nulla nec hendrerit felis. Morbi non blandit elit. Suspendisse vestibulum sed mauris quis commodo. In a dui in felis tincidunt luctus quis ut nisl. Pellentesque eget finibus turpis. Sed a dui varius, egestas leo interdum, pellentesque mi. Donec ac ante vel neque sagittis commodo vel eget ante.",
+        "done": false
+    },
+    {
+        "id": "6",
+        "title": "Practice yoga",
+        "priority": "Medium priority",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut efficitur dolor, et suscipit nisl. Nulla auctor est justo, efficitur cursus purus facilisis eu. Nulla nec hendrerit felis. Morbi non blandit elit. Suspendisse vestibulum sed mauris quis commodo. In a dui in felis tincidunt luctus quis ut nisl. Pellentesque eget finibus turpis. Sed a dui varius, egestas leo interdum, pellentesque mi. Donec ac ante vel neque sagittis commodo vel eget ante.",
+        "done": false
+    },
+    {
+        "id": "7",
+        "title": "Study quantum physics",
+        "priority": "High priority",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut efficitur dolor, et suscipit nisl. Nulla auctor est justo, efficitur cursus purus facilisis eu. Nulla nec hendrerit felis. Morbi non blandit elit. Suspendisse vestibulum sed mauris quis commodo. In a dui in felis tincidunt luctus quis ut nisl. Pellentesque eget finibus turpis. Sed a dui varius, egestas leo interdum, pellentesque mi. Donec ac ante vel neque sagittis commodo vel eget ante.",
+        "done": false
     }
 ]

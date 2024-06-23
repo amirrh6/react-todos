@@ -4,7 +4,8 @@ Just a simple experiment with React 18 based on a [tutorial](https://youtu.be/LD
 
 1. Clone using `git clone repo_url`
 2. Run `npm install`
-3. Run `npm run dev`
+3. Run `npm run server` to run mock back-end on port 8000
+4. Run `npm run dev` to run front-end on port 3000
 
 ## Features
 
@@ -15,6 +16,8 @@ Just a simple experiment with React 18 based on a [tutorial](https://youtu.be/LD
 -   -   [x] Items (TODOs)
 -   -   -   [x] Item (TODO)
 -   -   -   -   [x] Content collapse (more or less) button
+-   -   -   -   [ ] Delete functionality
+-   -   -   -   [ ] Edit functionality
 -   -   [x] ViewAllTODOs
 -   [ ] Pages:
 -   -   [x] Home page
@@ -25,11 +28,9 @@ Just a simple experiment with React 18 based on a [tutorial](https://youtu.be/LD
 -   -   [ ] ...
 -   [x] Use 'react-router-dom' and its related components
 -   [x] Use 'react-icons' for Font Awesome Icons
--   [x] Fetch TODOs from a JSON file
--   [ ] Fetch TODOs from a mock back-end like 'json-server'
--   -   [ ] CRUD
--   [ ] Fetch TODOs from a real back-end like Firebase
--   -   [ ] CRUD
+-   [x] ~~Fetch TODOs from / Update TODOs to a JSON file~~
+-   [x] Fetch TODOs from / Update TODOs to a mock back-end like 'json-server'
+-   [ ] Fetch TODOs from / Update TODOs to a real back-end like Firebase
 -   [ ] ...
 
 ### Screenshot

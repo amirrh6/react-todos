@@ -1,9 +1,28 @@
 /* eslint-disable react/prop-types */
-import todos from '../todos.json';
+import { useState, useEffect } from 'react';
 import Item from './Item';
 
 const Items = ({ returnRecentOnly = false }) => {
     // console.log(todos);
+
+    const [todos, setTODOs] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchTODOs = async () => {
+            try {
+                const res = await fetch('http://localhost:8000/jobs');
+                const data = await res.json();
+                setTODOs(data);
+            } catch (error) {
+                console.error('Error', error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchTODOs();
+    }, []);
 
     const TODOsList = returnRecentOnly ? todos.slice(0, 6) : todos;
 
@@ -14,9 +33,16 @@ const Items = ({ returnRecentOnly = false }) => {
                     {returnRecentOnly ? 'Most recent TODOs' : 'Browse TODOs'}
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {TODOsList.map((todo) => (
-                        <Item key={todo.id} todo={todo} />
-                    ))}
+                    {loading ? (
+                        'Loading'
+                    ) : (
+                        <>
+                            {' '}
+                            {TODOsList.map((todo) => (
+                                <Item key={todo.id} todo={todo} />
+                            ))}
+                        </>
+                    )}
                 </div>
             </div>
         </section>

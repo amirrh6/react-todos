@@ -30,6 +30,7 @@ Just a simple experiment with React 18 based on a [tutorial](https://youtu.be/LD
 -   [x] Use 'react-icons' for Font Awesome Icons
 -   [x] ~~Fetch TODOs from / Update TODOs to a JSON file~~
 -   [x] Fetch TODOs from / Update TODOs to a mock back-end like 'json-server'
+-   [ ] Fetch TODOs from / Update TODOs to browser's localStorage
 -   [ ] Fetch TODOs from / Update TODOs to a real back-end like Firebase
 -   [ ] ...
 

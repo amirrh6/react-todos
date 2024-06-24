@@ -22,7 +22,7 @@ Just a simple experiment with React 18 based on a [tutorial](https://youtu.be/LD
 -   [ ] Pages:
 -   -   [x] Home page
 -   -   [x] All TODOs page
--   -   [ ] Single TODO page (details)
+-   -   [x] Single TODO page (details)
 -   -   [ ] Add TODO page
 -   -   [x] Not found (404) page
 -   -   [ ] ...

@@ -1,6 +1,7 @@
 import { useParams, useLoaderData, Link } from 'react-router-dom';
 import { FaCheckCircle, FaClock } from 'react-icons/fa';
 import defaultTODOs from '../todos.json';
+import { backend } from '../others/others';
 
 const TODOPage = () => {
     // eslint-disable-next-line no-unused-vars
@@ -86,8 +87,6 @@ const TODOPage = () => {
 };
 
 const TODOLoader = async ({ params }) => {
-    const backend = 'browser'; // 'browser' | 'json-server'
-
     if (backend == 'json-server') {
         const apiUrl = `/api/todos/${params.id}`;
 

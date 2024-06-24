@@ -3,11 +3,10 @@ import { useState, useEffect } from 'react';
 import Item from './Item';
 import Spinner from './Spinner';
 import defaultTODOs from '../todos.json';
+import { backend } from '../others/others';
 
 const Items = ({ returnRecentOnly = false }) => {
     const recentCount = 3;
-
-    const backend = 'browser'; // 'browser' | 'json-server'
 
     const [todos, setTODOs] = useState([]);
     const [loading, setLoading] = useState(true);

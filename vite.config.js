@@ -12,14 +12,14 @@ export default defineConfig({
 
         proxy:
             // eslint-disable-next-line no-undef
-            process.env.NO_PROXY !== undefined
-                ? undefined
-                : {
+            process.env.PROXY_JSON_SERVER !== undefined
+                ? {
                       '/api': {
                           target: 'http://localhost:8000',
                           changeOrigin: true,
                           rewrite: (path) => path.replace(/^\/api/, '')
                       }
                   }
+                : undefined
     }
 });

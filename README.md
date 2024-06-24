@@ -16,7 +16,7 @@ Just a simple experiment with React 18 based on a [tutorial](https://youtu.be/LD
 -   -   -   [x] Item (TODO)
 -   -   -   -   [x] Content collapse (more or less) button
 -   -   -   -   [x] Delete functionality
--   -   -   -   [ ] Edit functionality
+-   -   -   -   [x] Edit functionality
 -   -   [x] ViewAllTODOs
 -   [ ] Pages:
 -   -   [x] Home page

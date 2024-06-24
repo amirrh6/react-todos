@@ -60,10 +60,20 @@ const TODOPage = () => {
                                 <Link
                                     to="#"
                                     className="bg-indigo-500 hover:bg-indigo-600 text-white text-center font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block"
+                                    onClick={(event) => {
+                                        event.preventDefault();
+                                        alert('Work in Progress...');
+                                    }}
                                 >
                                     Edit TODO
                                 </Link>
-                                <button className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block">
+                                <button
+                                    className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block"
+                                    onClick={(event) => {
+                                        event.preventDefault();
+                                        alert('Work in Progress...');
+                                    }}
+                                >
                                     Delete TODO
                                 </button>
                             </div>

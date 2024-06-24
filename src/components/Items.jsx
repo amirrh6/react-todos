@@ -5,6 +5,8 @@ import Spinner from './Spinner';
 import defaultTODOs from '../todos.json';
 
 const Items = ({ returnRecentOnly = false }) => {
+    const recentCount = 3;
+
     const backend = 'browser'; // 'browser' | 'json-server'
 
     const [todos, setTODOs] = useState([]);
@@ -14,7 +16,9 @@ const Items = ({ returnRecentOnly = false }) => {
         const fetchTODOs = async () => {
             if (backend == 'json-server') {
                 try {
-                    const apiUrl = !returnRecentOnly ? '/api/todos' : '/api/todos?_limit=6';
+                    const apiUrl = !returnRecentOnly
+                        ? '/api/todos'
+                        : `/api/todos?_limit=${recentCount}`;
 
                     const res = await fetch(apiUrl);
                     const data = await res.json();
@@ -44,7 +48,7 @@ const Items = ({ returnRecentOnly = false }) => {
     if (backend == 'json-server') {
         TODOsList = todos;
     } else if (backend == 'browser') {
-        TODOsList = returnRecentOnly ? todos.slice(0, 6) : todos;
+        TODOsList = returnRecentOnly ? todos.slice(0, recentCount) : todos;
     }
 
     return (

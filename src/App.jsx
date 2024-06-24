@@ -12,19 +12,20 @@ import TODOPage, { TODOLoader } from './pages/TODOPage';
 import AddTODOPage from './pages/AddTODOPage';
 import NotFoundPage from './pages/NotFoundPage';
 
-const router = createBrowserRouter(
-    createRoutesFromElements(
-        <Route path="/" element={<MainLayout />}>
-            <Route index element={<HomePage />} />
-            <Route path="/todos" element={<TODOsPage />} />
-            <Route path="/todos/:id" element={<TODOPage />} loader={TODOLoader} />
-            <Route path="/add-todo" element={<AddTODOPage />} />
-            <Route path="*" element={<NotFoundPage />} />
-        </Route>
-    )
-);
 
 const App = () => {
+    const router = createBrowserRouter(
+        createRoutesFromElements(
+            <Route path="/" element={<MainLayout />}>
+                <Route index element={<HomePage />} />
+                <Route path="/todos" element={<TODOsPage />} />
+                <Route path="/todos/:id" element={<TODOPage />} loader={TODOLoader} />
+                <Route path="/add-todo" element={<AddTODOPage />} />
+                <Route path="*" element={<NotFoundPage />} />
+            </Route>
+        )
+    );
+
     return <RouterProvider router={router} />;
 };
 

@@ -6,14 +6,20 @@ export default defineConfig({
     plugins: [react()],
     server: {
         port: 3000,
+
         // eslint-disable-next-line no-undef
         host: process.env.EXPOSE_TO_NETWORK !== undefined ? '0.0.0.0' : '127.0.0.1',
-        proxy: {
-            '/api': {
-                target: 'http://localhost:8000',
-                changeOrigin: true,
-                rewrite: (path) => path.replace(/^\/api/, '')
-            }
-        }
+
+        proxy:
+            // eslint-disable-next-line no-undef
+            process.env.NO_PROXY !== undefined
+                ? undefined
+                : {
+                      '/api': {
+                          target: 'http://localhost:8000',
+                          changeOrigin: true,
+                          rewrite: (path) => path.replace(/^\/api/, '')
+                      }
+                  }
     }
 });

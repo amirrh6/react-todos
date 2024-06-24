@@ -1,13 +1,15 @@
-import { useParams, useLoaderData, Link } from 'react-router-dom';
+/* eslint-disable react/prop-types */
+import { useParams, useLoaderData, Link, useNavigate } from 'react-router-dom';
 import { FaCheckCircle, FaClock } from 'react-icons/fa';
 import defaultTODOs from '../todos.json';
 import { backend } from '../others/others';
 
-const TODOPage = () => {
+const TODOPage = ({ deleteTODO }) => {
     // eslint-disable-next-line no-unused-vars
     const { id } = useParams();
 
     const todo = useLoaderData();
+    const navigate = useNavigate();
 
     return (
         <>
@@ -70,9 +72,15 @@ const TODOPage = () => {
                                 </Link>
                                 <button
                                     className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block"
-                                    onClick={(event) => {
-                                        event.preventDefault();
-                                        alert('Work in Progress...');
+                                    onClick={() => {
+                                        if (
+                                            window.confirm(
+                                                'Are you sure you want to delete this item?'
+                                            )
+                                        ) {
+                                            deleteTODO(todo.id);
+                                            navigate('/todos');
+                                        }
                                     }}
                                 >
                                     Delete TODO

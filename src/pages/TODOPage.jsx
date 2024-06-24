@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useParams, useLoaderData, Link, useNavigate } from 'react-router-dom';
 import { FaCheckCircle, FaClock } from 'react-icons/fa';
+import { toast } from 'react-toastify';
 import defaultTODOs from '../todos.json';
 import { backend } from '../others/others';
 
@@ -79,6 +80,7 @@ const TODOPage = ({ deleteTODO }) => {
                                             )
                                         ) {
                                             deleteTODO(todo.id);
+                                            toast.success('TODO was deleted!');
                                             navigate('/todos');
                                         }
                                     }}

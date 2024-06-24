@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react';
+import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 
 const AddTODOPage = ({ addTODOSubmit }) => {
@@ -19,6 +20,7 @@ const AddTODOPage = ({ addTODOSubmit }) => {
         };
 
         addTODOSubmit(newTODO);
+        toast.success('TODO added successfully!');
         return navigate('/todos');
     };
 

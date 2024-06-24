@@ -1,5 +1,6 @@
 import { useParams, useLoaderData, Link } from 'react-router-dom';
 import { FaCheckCircle, FaClock } from 'react-icons/fa';
+import defaultTODOs from '../todos.json';
 
 const TODOPage = () => {
     // eslint-disable-next-line no-unused-vars
@@ -75,12 +76,25 @@ const TODOPage = () => {
 };
 
 const TODOLoader = async ({ params }) => {
-    const apiUrl = `/api/todos/${params.id}`;
+    const backend = 'browser'; // 'browser' | 'json-server'
 
-    const res = await fetch(apiUrl);
-    const data = await res.json();
+    if (backend == 'json-server') {
+        const apiUrl = `/api/todos/${params.id}`;
 
-    return data;
+        const res = await fetch(apiUrl);
+        const data = await res.json();
+
+        return data;
+    } else if (backend == 'browser') {
+        if (localStorage.getItem('todos') === null) {
+            localStorage.setItem('todos', JSON.stringify(defaultTODOs['todos']));
+        }
+
+        const readTODOs = JSON.parse(localStorage.getItem('todos'));
+        const foundObject = readTODOs.find((object) => object.id == params.id);
+
+        return foundObject;
+    }
 };
 
 export { TODOPage as default, TODOLoader };

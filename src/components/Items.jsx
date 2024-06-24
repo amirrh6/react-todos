@@ -2,24 +2,37 @@
 import { useState, useEffect } from 'react';
 import Item from './Item';
 import Spinner from './Spinner';
+import defaultTODOs from '../todos.json';
 
 const Items = ({ returnRecentOnly = false }) => {
-    // console.log(todos);
+    const backend = 'browser'; // 'browser' | 'json-server'
 
     const [todos, setTODOs] = useState([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchTODOs = async () => {
-            try {
-                const apiUrl = !returnRecentOnly ? '/api/todos' : '/api/todos?_limit=6';
+            if (backend == 'json-server') {
+                try {
+                    const apiUrl = !returnRecentOnly ? '/api/todos' : '/api/todos?_limit=6';
 
-                const res = await fetch(apiUrl);
-                const data = await res.json();
-                setTODOs(data);
-            } catch (error) {
-                console.error('Error', error);
-            } finally {
+                    const res = await fetch(apiUrl);
+                    const data = await res.json();
+                    setTODOs(data);
+                } catch (error) {
+                    console.error('Error', error);
+                } finally {
+                    setLoading(false);
+                }
+            } else if (backend == 'browser') {
+                if (localStorage.getItem('todos') === null) {
+                    localStorage.setItem('todos', JSON.stringify(defaultTODOs['todos']));
+                }
+
+                const readTODOs = JSON.parse(localStorage.getItem('todos'));
+                console.log('readTODOs', readTODOs);
+
+                setTODOs(readTODOs);
                 setLoading(false);
             }
         };
@@ -27,8 +40,12 @@ const Items = ({ returnRecentOnly = false }) => {
         fetchTODOs();
     }, []);
 
-    // const TODOsList = returnRecentOnly ? todos.slice(0, 6) : todos;
-    const TODOsList = todos;
+    let TODOsList = [];
+    if (backend == 'json-server') {
+        TODOsList = todos;
+    } else if (backend == 'browser') {
+        TODOsList = returnRecentOnly ? todos.slice(0, 6) : todos;
+    }
 
     return (
         <section className="bg-blue-50 px-4 py-10">

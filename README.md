@@ -4,8 +4,7 @@ Just a simple experiment with React 18 based on a [tutorial](https://youtu.be/LD
 
 1. Clone using `git clone repo_url`
 2. Run `npm install`
-3. Run `npm run server` to run mock back-end on port 8000
-4. Run `npm run dev` to run front-end on port 3000
+3. Run `npm run dev` to run front-end on port 3000
 
 ## Features
 

@@ -16,8 +16,8 @@ const Items = ({ returnRecentOnly = false }) => {
             if (backend == 'json-server') {
                 try {
                     const apiUrl = !returnRecentOnly
-                        ? '/api/todos'
-                        : `/api/todos?_limit=${recentCount}`;
+                        ? '/api/todos?_sort=-id'
+                        : `/api/todos?_sort=-id&_limit=${recentCount}`;
 
                     const res = await fetch(apiUrl);
                     const data = await res.json();
@@ -33,6 +33,7 @@ const Items = ({ returnRecentOnly = false }) => {
                 }
 
                 const readTODOs = JSON.parse(localStorage.getItem('todos'));
+                readTODOs.reverse();
                 console.log('readTODOs', readTODOs);
 
                 setTODOs(readTODOs);

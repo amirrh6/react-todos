@@ -15,14 +15,14 @@ Just a simple experiment with React 18 based on a [tutorial](https://youtu.be/LD
 -   -   [x] Items (TODOs)
 -   -   -   [x] Item (TODO)
 -   -   -   -   [x] Content collapse (more or less) button
--   -   -   -   [ ] Delete functionality
+-   -   -   -   [x] Delete functionality
 -   -   -   -   [ ] Edit functionality
 -   -   [x] ViewAllTODOs
 -   [ ] Pages:
 -   -   [x] Home page
 -   -   [x] All TODOs page
 -   -   [x] Single TODO page (details)
--   -   [ ] Add TODO page
+-   -   [x] Add TODO page
 -   -   [x] Not found (404) page
 -   -   [ ] ...
 -   [x] Use 'react-router-dom' and its related components

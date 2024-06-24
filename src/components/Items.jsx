@@ -12,7 +12,7 @@ const Items = ({ returnRecentOnly = false }) => {
     useEffect(() => {
         const fetchTODOs = async () => {
             try {
-                const apiUrl = !returnRecentOnly ? '/api/jobs' : '/api/jobs?_limit=6';
+                const apiUrl = !returnRecentOnly ? '/api/todos' : '/api/todos?_limit=6';
 
                 const res = await fetch(apiUrl);
                 const data = await res.json();

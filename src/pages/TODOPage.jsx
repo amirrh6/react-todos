@@ -75,7 +75,7 @@ const TODOPage = () => {
 };
 
 const TODOLoader = async ({ params }) => {
-    const apiUrl = `/api/jobs/${params.id}`;
+    const apiUrl = `/api/todos/${params.id}`;
 
     const res = await fetch(apiUrl);
     const data = await res.json();
